@@ -1,0 +1,115 @@
+<%= form_with(model: detail) do |form| %>
+  <% if detail.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(detail.errors.count, "error") %> prohibited this detail from being saved:</h2>
+
+      <ul>
+        <% detail.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+    <br><br>
+  </div>
+  
+  <div>
+    <%= form.label :Profie_Photo %>
+      <%= form.file_field :avatar%> <br>
+  </div>
+<br>
+
+  <div>
+    <%= form.label :job_title, style: "display: block" %>
+    <%= form.text_field :job_title %>
+  </div>
+
+  <div>
+    <%= form.label :Years_Of_Experience, style: "display: block" %>
+    <%= form.text_field :Years_Of_Experience %>
+  </div>
+
+  <div>
+    <%= form.label :primary_skiils, style: "display: block" %>
+    <%= form.text_field :primary_skiils %>
+  </div>
+
+  <div>
+    <%= form.label :secondary_skills, style: "display: block" %>
+    <%= form.text_field :secondary_skills %>
+  </div>
+<br><br>
+<h1>Experience</h1>
+  <div>
+    <%= form.label :company, style: "display: block" %>
+    <%= form.text_field :company %>
+  </div>
+
+  <div>
+    <%= form.label :position, style: "display: block" %>
+    <%= form.text_field :position %>
+  </div>
+  <br>
+
+  <div>
+    <%= form.label :start_date, style: "display: block" %>
+    <%= form.date_field :start_date %>
+  </div>
+  <br>
+
+  <div>
+    <%= form.label :end_date, style: "display: block" %>
+    <%= form.date_field :end_date %>
+  </div>
+  <br>
+
+  <div>
+    <%= form.label :description, style: "display: block" %>
+    <%= form.text_field :description %>
+  </div>
+<br><br>
+<h1>Project</h1>
+  <div>
+    <%= form.label :title, style: "display: block" %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div>
+    <%= form.label :tech_stack, style: "display: block" %>
+    <%= form.text_field :tech_stack %>
+  </div>
+
+  <div>
+    <%= form.label :desc, style: "display: block" %>
+    <%= form.text_field :desc %>
+  </div>
+  <br><br>
+  <h1>Education</h1>
+
+  <div>
+    <%= form.label :school_name, style: "display: block" %>
+    <%= form.text_field :school_name %>
+  </div>
+
+  <div>
+    <%= form.label :degree, style: "display: block" %>
+    <%= form.text_field :degree %>
+  </div>
+
+  <div>
+    <%= form.label :grade, style: "display: block" %>
+    <%= form.text_field :grade %>
+  </div>
+<br>
+
+
+  <br>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
